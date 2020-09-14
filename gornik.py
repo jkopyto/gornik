@@ -8,7 +8,7 @@ def get_url(num):
 
 def fetch_data(num):
 
-    r = requests.get(url=get_url(int(num)), params={})
+    r = requests.get(url=get_url(num), params={})
     soup = BeautifulSoup(r.text, "html.parser")
     headers_list = soup.find_all("span", class_="cont_header")
 
@@ -17,7 +17,7 @@ def fetch_data(num):
 
     msg = input("\nType y to show next page titles: ")
     if msg == "y":
-        fetch_data(int(num) + 1)
+        fetch_data(num + 1)
     else:
         return
 
