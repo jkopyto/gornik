@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 def get_url(num):
-    return "http://www.gornik.tbg.net.pl/news.htm?page={0}".format(num)
+    return f"http://www.gornik.tbg.net.pl/news.htm?page={num}"
 
 
 def fetch_data(num):
